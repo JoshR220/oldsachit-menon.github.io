@@ -1,0 +1,4 @@
+Sitemap: https://sachit-menon.github.io/sitemapindex.xml
+
+User-Agent: *
+Host: sachit-menon.github.io
