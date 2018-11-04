@@ -7,15 +7,19 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://sachit-menon.github.io/</loc>
-  <lastmod>2018-10-16T21:34:00Z</lastmod>
+  <lastmod>2018-11-04T21:05:00Z</lastmod>
  </url>
  <url>
   <loc>https://sachit-menon.github.io/2018/</loc>
   <lastmod>2018-10-16T22:54:00Z</lastmod>
  </url>
  <url>
+  <loc>https://sachit-menon.github.io/about/</loc>
+  <lastmod>2018-11-04T21:05:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://sachit-menon.github.io/archive.html</loc>
-  <lastmod>2018-10-16T23:01:00Z</lastmod>
+  <lastmod>2018-11-04T23:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://sachit-menon.github.io/categories/</loc>
@@ -30,8 +34,24 @@
   <lastmod>2018-10-16T21:02:00Z</lastmod>
  </url>
  <url>
+  <loc>https://sachit-menon.github.io/home/</loc>
+  <lastmod>2018-11-04T20:36:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://sachit-menon.github.io/listings/</loc>
   <lastmod>2018-10-16T21:02:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://sachit-menon.github.io/posts/</loc>
+  <lastmod>2018-11-04T23:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://sachit-menon.github.io/posts/autoencoder-fundamentals/</loc>
+  <lastmod>2018-11-04T23:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://sachit-menon.github.io/posts/independent-component-analysis/</loc>
+  <lastmod>2018-11-04T23:01:00Z</lastmod>
  </url>
  <url>
   <loc>https://sachit-menon.github.io/posts/ipython-notebook-demo/</loc>
