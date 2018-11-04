@@ -1,0 +1,91 @@
+## -*- coding: utf-8 -*-
+<%namespace name="base" file="base_helper.tmpl" import="*" />
+<%namespace name="notes" file="annotation_helper.tmpl" import="*" />
+${set_locale(lang)}
+${base.html_headstart()}
+<%block name="extra_head">
+### Leave this block alone.
+</%block>
+${template_hooks['extra_head']()}
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">${messages("Skip to main content")}</a>
+
+<div class="container">
+    <div class="page-header">
+        {% if search_form %}
+        {{ search_form }}
+        {% endif %}
+        <ul class="nav nav-pills pull-right">
+            {% block belowtitle %}
+            {% if translations|length > 1 %}
+                <li>{{ base.html_translations() }}</li>
+            {% endif %}
+            {% endblock %}
+            {% if show_sourcelink %}
+                {% block sourcelink %}{% endblock %}
+            {% endif %}
+            {{ template_hooks['menu_alt']() }}
+        </ul>
+        <a  href="{{ abs_link(_link("root", None, lang)) }}">
+            {% if logo_url %}
+                <img src="{{ logo_url }}" alt="{{ blog_title }}" id="logo">
+            {% endif %}
+            <h2 class="text-muted">
+            {% if show_blog_title %}
+                <span id="blog-title"><strong>{{ blog_title }}</strong></span>
+            {% endif %}
+            </h2>
+        </a>
+    </div> <!-- ./page-header -->
+</div> <!-- ./container -->
+
+<div class="container" id="content" role="main">
+    <div class="row">
+        <div class="col-sm-3 col-md-2">
+            <ul class="nav nav-pills nav-stacked">
+                {{ base.html_navigation_links() }}
+                {{ template_hooks['menu']() }}
+            </ul>
+        </div> <!-- ./col -->
+        <div class="col-sm-9 col-md-10">
+            <div class="body-content">
+                <!--Body content-->
+                <div class="row">
+                    {{ template_hooks['page_header']() }}
+                    {% block content %}{% endblock %}
+                </div>
+                <!--End of body content-->
+            </div>
+        </div> <!-- ./col -->
+    </div> <!-- ./row -->
+</div> <!-- ./container -->
+
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted">
+            {{ content_footer }}
+            {{ template_hooks['page_footer']() }}
+        </p>
+    </div>
+</footer>
+
+${base.late_load_js()}
+    <!-- fancy dates -->
+    <script>
+    moment.locale("${momentjs_locales[lang]}");
+    fancydates(${date_fanciness}, ${js_date_format});
+    </script>
+    <!-- end fancy dates -->
+    <%block name="extra_js"></%block>
+    <script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+${body_end}
+${template_hooks['body_end']()}
+</body>
+</html>
